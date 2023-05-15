@@ -60,7 +60,7 @@ function App() {
     <Layout>
     <Routes>
     <Route path="/" element={<Viewnotes  createdNote={newlyCreated} newNoteAlert={SetNewCreated}  />} />
-    <Route path="/create" element={<Createnotes onCreate={SetNewCreated}  /> } />
+    <Route path="/#/create" element={<Createnotes onCreate={SetNewCreated}  /> } />
     </Routes>
     </Layout>
     </>
