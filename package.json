@@ -1,7 +1,7 @@
 {
   "name": "notes",
   "version": "0.1.0",
-  "homepage": "https://gh-mensah.github.io/notes",
+  "homepage": "https://Gh-Mensah.github.io/notes",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
