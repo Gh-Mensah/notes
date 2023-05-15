@@ -1,0 +1,18 @@
+  const searchAction = ()=>{
+    console.log("It is coming")
+    setFavor(current => !current)
+  }
+
+  const textHandler =   useCallback( (e)=>{
+    setSearchTxt(e.target.value)
+  },[searchTxt]  )
+
+
+
+
+const filtered = items && items.filter( item => item.title.includes(searchTxt) )
+
+  console.log(favorOn)
+
+
+  const filteres = items && items.filter( item => item.title.toLowerCase().includes(searchTxt.toLowerCase()) && item.category.includes("todo") && item.category.includes("reminder") && item.title.sort() && item.date.sort() )

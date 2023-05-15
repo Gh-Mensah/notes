@@ -1,0 +1,16 @@
+.location{
+    text-decoration: none;
+}
+
+.location:hover{
+    background-color:transparent;
+}
+.location:active{
+    background-color: transparent;
+}
+.location:focus{
+    background-color: transparent;
+}
+.location:visited{
+    background-color: transparent;
+}
