@@ -315,12 +315,12 @@ function SearchFilter({newContent ,testContent , defaultSort , sortAscending , s
 
       <Modal
       open={open}
-      sx={{ display:"flex" , justifyContent:"center" , alignItems:"center"}}
+      sx={{ display:"flex" , justifyContent:"center" , alignItems:"center" , backgroundColor:"black"}}
       >
 
         <Paper 
         elevation={2} 
-        sx={{ backgroundColor:lime[50], width:ResModal() , borderRadius:"20px"}} >
+        sx={{ backgroundColor:lime[50], width:"88% ", borderRadius:"20px" , height:"88%" , overflowY:smbreak? "scroll" : "hidden" }} >
 
               <Box sx={{  display:"flex" , justifyContent:"space-between" , bgcolor:"#928E85" , borderTopLeftRadius:"20px"  , borderTopRightRadius:"20px"}} >
                 <Box sx={{ borderTopLeftRadius:"20px" , display:"flex" , justifyContent:"center" , alignItems:"center" }}>
@@ -348,7 +348,7 @@ function SearchFilter({newContent ,testContent , defaultSort , sortAscending , s
               </Box>
               <Container fixed >
                 <Typography 
-                variant='h4'
+                variant={smbreak? "h6" : "h4"}
                 mt={2} 
                 color="#808080" 
                 sx={{ fontWeight:"bold" }}>
