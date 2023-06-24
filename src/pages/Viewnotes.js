@@ -18,14 +18,14 @@ function Viewnotes({createdNote ,newNoteAlert}) {
 
 
   useEffect(()=>{
-    axios(`http://localhost:2500/notes`)
+    axios(`https://api.npoint.io/cea8e113bddc50699d32/notes`)
     .then((res)=>{
       setNotes(res.data)
     })
   },[DefaultToggler])
 
   useEffect(()=>{
-    axios(`http://localhost:2500/notes`).then((res)=>{
+    axios(`https://api.npoint.io/cea8e113bddc50699d32/notes`).then((res)=>{
       setmanipulatedNotes(res.data)
     })
   },[])

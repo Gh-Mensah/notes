@@ -63,7 +63,7 @@ const theme= useTheme()
 const deleteItem = (id)=>{
   const newCollection = items.filter((item)=> item.id !== id)
   setNewItemsContent(newCollection)
-  axios.delete(`http://localhost:2500/notes/${id}`)
+  axios.delete(`https://api.npoint.io/cea8e113bddc50699d32/notes/${id}`)
   setDeletedVal(id)
 }
 

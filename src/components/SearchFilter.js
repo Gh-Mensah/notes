@@ -133,21 +133,12 @@ function SearchFilter({newContent ,testContent , defaultSort , sortAscending , s
   }
 
  
-
+// View breakpoints 
 
   const theme= useTheme()
   const smbreak = useMediaQuery(theme.breakpoints.down('md'))
-  const mdbreak = useMediaQuery(theme.breakpoints.up('md'))
+  const lgbreak = useMediaQuery(theme.breakpoints.down('lg'))
 
-
-  let ResModal = ()=>{
-    if(smbreak === true){
-        return "95%"
-    }
-    if(mdbreak === true){
-        return "60%"
-    }
-}
 
   const filtOpenHandler = ()=>{
     console.log("FilterOpen");
@@ -188,7 +179,7 @@ function SearchFilter({newContent ,testContent , defaultSort , sortAscending , s
 
 
 
-    const filterHandler = async ()=>{
+    const filterHandler = ()=>{
       
       setFiltCheck(true)
       const UserSelectedCategory = !searchCheck ? testContent && testContent.filter( item=> item.category == (tdChecker ? "todo" : null) || item.category == (rmdChecker ? "reminder" : null) || item.category == (wkChecker ? "work" : null) || item.category == ( otherChecker ? "other" : null) ) : searchContent && searchContent.filter( item=> item.category == (tdChecker ? "todo" : null) || item.category == (rmdChecker ? "reminder" : null) || item.category == (wkChecker ? "work" : null) || item.category == ( otherChecker ? "other" : null) )
@@ -315,12 +306,12 @@ function SearchFilter({newContent ,testContent , defaultSort , sortAscending , s
 
       <Modal
       open={open}
-      sx={{ display:"flex" , justifyContent:"center" , alignItems:"center" , backgroundColor:"black"}}
+      sx={{ display:"flex" , justifyContent:"center" , alignItems:"center"}}
       >
 
         <Paper 
         elevation={2} 
-        sx={{ backgroundColor:lime[50], width:"88% ", borderRadius:"20px" , height:"88%" , overflowY:smbreak? "scroll" : "hidden" }} >
+        sx={{ backgroundColor:lime[50], width:"88% ", borderRadius:"20px" , height:"31em" , overflowY: lgbreak? "scroll" : "hidden" }} >
 
               <Box sx={{  display:"flex" , justifyContent:"space-between" , bgcolor:"#928E85" , borderTopLeftRadius:"20px"  , borderTopRightRadius:"20px"}} >
                 <Box sx={{ borderTopLeftRadius:"20px" , display:"flex" , justifyContent:"center" , alignItems:"center" }}>

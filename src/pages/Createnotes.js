@@ -197,10 +197,10 @@ function Createnotes({onCreate}) {
                 </Box>
 
                 <Box sx={{ display:"flex", mt:1, mb:1 , justifyContent:"end" }}>
-                    <Button variant='contained' size='large' sx={{width:"35%" , height:"5.5em" }} endIcon={<AddBoxOutlinedIcon sx={{color:"white" }}  />} color={selectedValue}  disableElevation={true} type="submit" >
+                    <Button variant='contained' size='medium' sx={{width:"30%" , height:"5.5em" }} endIcon={<AddBoxOutlinedIcon sx={{color:"white" , marginLeft:"-7px"}}  />} color={selectedValue}  disableElevation={true} type="submit" >
                         <Typography 
-                        sx={{ color:"white", fontWeight:"bold" }} 
-                        variant="h6" >
+                        sx={{ color:"white" , fontWeight:"bold"}} 
+                        variant="subtitle" >
                             Create
                         </Typography>
                         </Button>
